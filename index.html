@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Linking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+    label {
+      font-weight: bold;
+      color: #34495e;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Account Linking Form</h2>
+    <p>To enable payments to your account, please provide your details below. 
+    After submission, you’ll be directed to complete a one-time linking fee. 
+    This process helps us verify your account and activate payouts securely.</p>
+    <form action="payment.html" method="get">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="account">Bank Account Number:</label>
+      <input type="text" id="account" name="account" required>
+
+      <label for="bank">Bank Name:</label>
+      <input type="text" id="bank" name="bank" required>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p style="font-size:13px; color:#777; margin-top:15px;">
+      Your details are kept confidential and only used for account verification purposes.
+    </p>
+  </div>
+</body>
+</html>
