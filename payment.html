@@ -60,21 +60,40 @@
     please follow the steps below to pay the one-time linking fee:</p>
     <ol>
       <li>Copy the bank details provided below.</li>
-      <li>Make the payment of ₦[Fee Amount] via transfer.</li>
+      <li>Make the payment of <strong id="amountText"></strong> via transfer.</li>
       <li>Send proof of payment on WhatsApp for confirmation.</li>
     </ol>
 
-    <p><strong>Bank Name:</strong> Your Bank</p>
-    <p><strong>Account Number:</strong> 1234567890</p>
-    <p><strong>Account Name:</strong> Your Business Name</p>
-    <p><strong>Amount:</strong> ₦[Fee Amount]</p>
+    <p><strong>Bank Name:</strong> <span id="bankName"></span></p>
+    <p><strong>Account Number:</strong> <span id="accountNumber"></span></p>
+    <p><strong>Account Name:</strong> <span id="accountName"></span></p>
+    <p><strong>Amount:</strong> <span id="amount"></span></p>
 
-    <a href="https://wa.me/2348012345678" target="_blank">Send Proof on WhatsApp</a>
+    <a id="whatsappLink" href="#" target="_blank">Send Proof on WhatsApp</a>
 
     <p style="font-size:13px; color:#777; margin-top:15px;">
       Payments are usually confirmed within 24 hours. 
       For any issues, please contact support through the WhatsApp link above.
     </p>
   </div>
+
+  <script>
+    // 🔹 Change your details here only
+    const paymentDetails = {
+      bankName: "Capitec Bank",
+      accountNumber: "1879347855",
+      accountName: "MS MR MATHABATHA",
+      amount: "R1050 ZAR",
+      whatsapp: "27652513294" // no plus sign
+    };
+
+    // 🔹 Insert details into the page
+    document.getElementById("bankName").textContent = paymentDetails.bankName;
+    document.getElementById("accountNumber").textContent = paymentDetails.accountNumber;
+    document.getElementById("accountName").textContent = paymentDetails.accountName;
+    document.getElementById("amount").textContent = paymentDetails.amount;
+    document.getElementById("amountText").textContent = paymentDetails.amount;
+    document.getElementById("whatsappLink").href = "https://wa.me/" + paymentDetails.whatsapp;
+  </script>
 </body>
 </html>
